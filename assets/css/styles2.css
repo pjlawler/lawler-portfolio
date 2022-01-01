@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#boxes {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.mybox {
+    display: flex;
+    flex-direction: column;
+    /* align-content: space-between; */
+    justify-content: space-between;
+    border: black 1px solid;
+    text-align: center;
+    width: 400px;
+    height: 700px;
+}
+
+.title {
+    background: cadetblue;
+    position: relative;
+    offset-position: x=+10px;
+}

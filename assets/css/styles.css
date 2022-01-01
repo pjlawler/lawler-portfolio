@@ -1,1 +1,250 @@
+:root {
+  --light-beige: #f0e9d2; /* rgb(240, 233, 210) */
+  --dark-beige: #e6ddc4; /* rgb(230, 221, 196) */
+  --teal: #678983; /* rgb(103, 137, 131) */
+  --dark-navy: #181d31; /* rgb(24, 29, 49) */
+}
 
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+body {
+  background: var(--teal);
+  color: var(--dark-navy);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  color: var(--light-beige);
+  background-color: var(--dark-navy);
+  /* width: 95%; */
+  margin: 0 auto;
+  /* border: black 1px solid; */
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  height: 125px;
+}
+
+header h1 {
+  font-size: 55px;
+  font-style: oblique;
+  margin-left: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav {
+  margin: 10px;
+  flex: 1;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 auto;
+  font-weight: bold;
+  padding: 5px;
+}
+
+header nav ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header nav ul li {
+  font-size: 24px;
+  width: 150px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2px;
+}
+
+header nav ul li:hover {
+  background-color: var(--light-beige);
+  color: var(--dark-navy);
+}
+
+.hero {
+  display: flex;
+  background-image: url(../images/code-background.jpg);
+  background-size: cover;
+  height: 300px;
+  color: var(--light-beige);
+  align-items: center;
+  justify-content: center;
+}
+
+.hero p {
+  width: 90%;
+  height: auto;
+  text-align: center;
+  font-size: 36px;
+  background-color: rgba(24, 29, 49,0.8);
+  padding: 50px;
+  border: var(--light-beige) 2px solid;
+}
+
+.row {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* border: var(--dark-navy) 1px solid; */
+  padding: 10px;
+  scroll-margin-top: 150px;
+}
+
+
+.bio-rightside {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.subtitle {
+  width: 100%;
+  color: var(--dark-navy);
+  font-size: 24px;
+  /* background-color:  rgba(240, 233, 210,0.4); */
+  text-align: center;
+  border-bottom: var(--dark-navy) solid 3px;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.bio-box {
+  display: flex;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  /* line-height: 1; */
+  padding-bottom: 10px;
+  /* border: black 1px solid; */
+  color: var(--light-beige);
+  background: var(--dark-navy);
+  height: 375px;
+}
+
+.image-box h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.image-box h3 {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.image-box img {
+  width: 300px;
+}
+
+.main-project {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.main-screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-description {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+
+.project {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  margin-top: 35px;
+  font-size: 16px;
+}
+
+.project img {
+  width: 300px;
+}
+
+.main-project img {
+  width: 500px;
+}
+
+#contact-me {
+  height: 725px;
+}
+
+#contactBlock {
+  width: 100%;
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content:space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#contactBlock h3 {
+  font-size: 44px;
+}
+
+#contatBlock h4 {
+  font-size: 32px;
+}
+
+#contact-span {
+  width: 2%;
+}
+
+#contact-info {
+  text-align: center;
+}
+
+#contactBlock ul li  {
+  list-style: none;
+  position: relative;
+  left: -38px;
+  margin-top: 10px;
+}
+
+footer {
+  color: var(--light-beige);
+  display: flex;
+  align-items: center;
+  background: var(--dark-navy);
+  justify-content: center;
+  height: 100px;
+  font-size: 12px;
+  font-style: italic;
+}
