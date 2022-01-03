@@ -17,19 +17,24 @@ body {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
   position: sticky;
   top: 0;
   color: var(--light-beige);
+
   background-color: var(--dark-navy);
+
   margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
+
   padding-left: 10px;
   padding-bottom: 10px;
   height: 125px;
 }
 
 header h1 {
+  flex: 0 1 10%;
   font-size: 55px;
   font-style: oblique;
   margin-left: 30px;
@@ -88,7 +93,7 @@ header nav ul li:hover {
   height: auto;
   text-align: center;
   font-size: 36px;
-  background-color: rgba(24, 29, 49,0.8);
+  background-color: rgba(24, 29, 49, 0.8);
   padding: 50px;
   border: var(--light-beige) 2px solid;
 }
@@ -98,28 +103,25 @@ header nav ul li:hover {
   margin: 0 auto;
   margin-top: 25px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: left;
   flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: center;
-  /* border: var(--dark-navy) 1px solid; */
   padding: 10px;
   scroll-margin-top: 150px;
+  
 }
-
 
 .bio-rightside {
   margin-left: 10px;
-  display: flex;
-  flex-direction: column;
 }
 
+.bio-rightside p {
+  margin-bottom: 15px;
+}
 
 .subtitle {
   width: 100%;
   color: var(--dark-navy);
   font-size: 24px;
-  /* background-color:  rgba(240, 233, 210,0.4); */
   text-align: center;
   border-bottom: var(--dark-navy) solid 3px;
   margin-bottom: 25px;
@@ -155,28 +157,11 @@ header nav ul li:hover {
   width: 300px;
 }
 
-.main-project {
-  display: flex;
-  padding: 10px;
-  align-items: flex-start;
-}
-
-.main-screenshot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-description {
-  margin-top: 40px;
-  font-size: 20px;
-}
-
-
 .project {
   display: flex;
   padding: 10px;
   align-items: flex-start;
+  border-bottom: var(--light-beige) 1px solid;
 }
 
 .screenshot {
@@ -185,17 +170,21 @@ header nav ul li:hover {
   align-items: center;
 }
 
+.screenshot h2 {
+  font-size: 24px;
+}
+
 .description {
   margin-top: 35px;
   font-size: 16px;
 }
 
-.project img {
-  width: 300px;
+.description p {
+  margin-bottom: 10px;
 }
 
-.main-project img {
-  width: 500px;
+.project img {
+  width: 300px;
 }
 
 #contact-me {
@@ -205,8 +194,8 @@ header nav ul li:hover {
 #contactBlock {
   width: 100%;
   display: flex;
-  /* align-items: flex-start; */
-  justify-content:space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -227,7 +216,7 @@ header nav ul li:hover {
   text-align: center;
 }
 
-#contactBlock ul li  {
+#contactBlock ul li {
   list-style: none;
   position: relative;
   left: -38px;
@@ -237,6 +226,7 @@ header nav ul li:hover {
 footer {
   color: var(--light-beige);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background: var(--dark-navy);
   justify-content: center;
@@ -245,8 +235,24 @@ footer {
   font-style: italic;
 }
 
-@media screen and (max-width: 1100px) {
+#projects .project:nth-child(2) p {
+  font-size: 20px;
+  margin-top: 10px;
+}
 
+#projects .project:nth-child(2) img {
+  width: 500px;
+}
+
+#projects .project:nth-child(2) h2 {
+  font-size: 30px;
+}
+
+#projects .project:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 1100px) {
   .bio-box {
     flex-direction: column;
     align-items: center;
@@ -283,37 +289,48 @@ footer {
     width: 130px;
   }
 
+  @media screen and (max-width: 785px) {
+    header {
+      flex-direction: column;
+      padding: 0;
+    }
 
-@media screen and (max-width: 785px) {
+    header nav {
+      width: 100%;
+    }
 
-  header {
-    flex-direction: column;
+    header h1 {
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+
+    header nav ul {
+      justify-content: space-around;
+    }
+
+    header nav ul li {
+      font-size: 18px;
+      width: 120px;
+    }
   }
 
+  @media screen and (max-width: 600px) {
+    body {
+      display: inline-block;
+    }
 
-  header nav {
-    width: 100%;
+    header h1 {
+      font-size: 24px;
+    }
+
+    header nav ul li {
+      font-size: 12px;
+      width: 75px;
+    }
+
+    footer {
+      flex-direction: column;
+    }
   }
-
-  header nav ul {
-    justify-content: space-around;
-
-  }
-
-  header nav ul li {
-    font-size: 18px;
-    width: 120px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  body {
-    display:inline-block;
-  }
-  
-
-}
-
-
 }
