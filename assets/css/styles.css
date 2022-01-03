@@ -309,11 +309,11 @@ footer {
     }
 
     .project img {
-      width: 150px;
+      width: 250px;
     }
 
     #projects .project:nth-child(2) img {
-      width: 200px;
+      width: 300px;
     }
 
     header li {
