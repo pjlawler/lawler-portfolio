@@ -6,30 +6,37 @@
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
 }
 
 body {
-  background-color: var(--teal);
+  background: var(--teal);
   color: var(--dark-navy);
 }
 
-/* Start Header Styling */
-
 header {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: space-between;
-  background-color: var(--dark-navy);
-  height: 150px;
-  padding: 0 20px 10px 20px;
-  border-bottom: var(--light-beige) 2px solid;
   position: sticky;
   top: 0;
   color: var(--light-beige);
+
+  background-color: var(--dark-navy);
+
+  margin: 0 auto;
+
+  padding-left: 10px;
+  padding-bottom: 10px;
+  height: 125px;
+}
+
+header h1 {
+  flex: 0 1 10%;
+  font-size: 55px;
+  font-style: oblique;
+  margin-left: 30px;
 }
 
 header a {
@@ -37,31 +44,38 @@ header a {
   color: inherit;
 }
 
-.title a {
-  font-size: 36px;
-  font-style: oblique;
+header nav {
+  margin: 10px;
+  flex: 1;
 }
 
-header ul {
+header nav ul {
   display: flex;
-  list-style: none;
+  align-items: center;
   justify-content: space-between;
+  list-style: none;
+  margin: 0 auto;
+  font-weight: bold;
+  padding: 5px;
 }
 
-header li {
+header nav ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header nav ul li {
+  font-size: 24px;
   width: 150px;
-  text-align: center;
   border-radius: 20px;
-  font-size: 20px;
+  text-align: center;
   padding: 2px;
 }
 
-header li:hover {
+header nav ul li:hover {
   background-color: var(--light-beige);
   color: var(--dark-navy);
 }
-
-/* Start Jumbotron Styling */
 
 .hero {
   display: flex;
@@ -75,14 +89,13 @@ header li:hover {
 
 .hero p {
   width: 90%;
+  height: auto;
   text-align: center;
   font-size: 36px;
   background-color: rgba(24, 29, 49, 0.8);
   padding: 50px;
-  border: var(--light-beige) 1px solid;
+  border: var(--light-beige) 2px solid;
 }
-
-/* Start Row Section Styling */
 
 .row {
   width: 95%;
@@ -93,16 +106,7 @@ header li:hover {
   flex-direction: column;
   padding: 10px;
   scroll-margin-top: 150px;
-}
-
-.subtitle {
-  width: 100%;
-  color: var(--dark-navy);
-  font-size: 24px;
-  text-align: center;
-  border-top: var(--dark-navy) solid 3px;
-  margin-bottom: 25px;
-  padding: 10px;
+  
 }
 
 .bio-rightside {
@@ -128,11 +132,10 @@ header li:hover {
   padding: 10px;
 }
 
-/* Start of Bio Section Styling */
-
 .bio-box {
   display: flex;
 }
+
 
 .image-box {
   display: flex;
@@ -142,7 +145,6 @@ header li:hover {
   padding-bottom: 10px;
   color: var(--light-beige);
   background: var(--dark-navy);
-  border: var(--light-beige) 1px solid;
   height: 375px;
 }
 
@@ -159,8 +161,6 @@ header li:hover {
 .image-box img {
   width: 300px;
 }
-
-/* Start of the Projects Section Styling */
 
 .project {
   display: flex;
@@ -192,57 +192,33 @@ header li:hover {
   width: 300px;
 }
 
-/* -- Increases font size  and image size for the first project */
-
-#projects .project:nth-child(2) p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-#projects .project:nth-child(2) h2 {
-  font-size: 30px;
-}
-
-#projects .project:nth-child(2) img {
-  width: 500px;
-}
-
-/* -- Removes border after last project */
-
-#projects .project:last-child {
-  border-bottom: none;
-}
-
-/* Start of Contact Me Section Styling */
-
 #contact-me {
   height: 725px;
 }
 
 #contactBlock {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 #contactBlock h3 {
-  font-size: 24px;
+  font-size: 44px;
 }
 
 #contatBlock h4 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
-#contactBlock li {
+#contactBlock ul li {
   list-style: none;
-  margin-top: 15px;
+  position: relative;
+  left: -38px;
+  margin-top: 10px;
 }
-
-#contactBlock img {
-  margin-top: 15px;
-}
-
-/* Start of Footer Section Styling */
 
 footer {
   color: var(--light-beige);
@@ -254,6 +230,23 @@ footer {
   height: 100px;
   font-size: 12px;
   font-style: italic;
+}
+
+#projects .project:nth-child(2) p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#projects .project:nth-child(2) img {
+  width: 500px;
+}
+
+#projects .project:nth-child(2) h2 {
+  font-size: 30px;
+}
+
+#projects .project:last-child {
+  border-bottom: none;
 }
 
 @media screen and (max-width: 1100px) {
@@ -269,6 +262,7 @@ footer {
   .project {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   header {
@@ -283,50 +277,50 @@ footer {
     font-size: 24px;
   }
 
-  header li {
+  header nav ul li {
     font-size: 22px;
     width: 130px;
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 785px) {
     header {
       flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-    }
-
-    header ul {
       padding: 0;
+      margin: 0;
+      width: 100%;
     }
-
-    .hero {
-      height: 150px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      padding: 5px;
-    }
-
-    .project img {
-      width: 150px;
-    }
-
-    #projects .project:nth-child(2) img {
-      width: 200px;
-    }
-
-    header li {
-      font-size: 14px;
-      width: 100px;
-    }
-
+    
+    
     header h1 {
-      font-size: 24px;
+      width: 100%;
+      /* justify-content: center; */
+      margin: 0 auto;
+      margin-top: 5px;
     }
 
-    footer {
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    header nav ul {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    header nav ul li {
+      font-size: 18px;
+      width: 120px;
+    }
+
+    .bio-rightside p {
+      text-align: center;
+    }
+
+    #contactBlock {
       flex-direction: column;
+      /* justify-content: space-between; */
+      /* align-items: center; */
+      /* text-align: center; */
     }
   }
-}
