@@ -203,7 +203,9 @@ header li:hover {
 }
 
 #projects .project:nth-child(2) img {
-  width: 500px;
+ width: 500px;
+ margin-right: 20px;
+ margin-top: 10px;
 }
 
 /* -- Removes border after last project */
